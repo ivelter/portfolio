@@ -1,48 +1,122 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
 import './assets/styles.scss';
+import { ref, type Ref } from 'vue'
+
+const darkMode: Ref<boolean> = ref(getDarkModeCookie() ?? userPrefersDarkMode());
+
+/**
+ * Returns true if the user's browser is set to prefer dark mode
+ */
+function userPrefersDarkMode(): boolean {
+  return window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
+
+/**
+ * Returns the value of the dark mode preference if it exists, else null
+ */
+function getDarkModeCookie(): boolean | null {
+  const match = document.cookie
+    .split("; ")
+    .find((row) => row.startsWith("darkmode-portfolior="))
+    ?.split("=")[1];
+  return match !== null ? match == 'true' : null;
+}
+
+/**
+ * Sets the dark mode cookie to the current value
+ */
+function setDarkModeCookie(): void {
+  document.cookie = `darkmode-portfolio=${darkMode.value}; path=/; max-age=${60 * 60 * 24 * 365}`; // 1 year
+}
+
+function toggleDarkMode() {
+  darkMode.value = !darkMode.value;
+  setDarkModeCookie();
+}
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div id="wrapper" :class="{'theme-light': !darkMode, 'theme-dark': darkMode}">
+    <header>
+      <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+<!--          <a class="navbar-item" @click="$router.push({name: 'home'})">-->
+<!--            <img alt="event manager logo" src="@/assets/logo-eventmanager.png">-->
+<!--          </a>-->
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
 
-  <main>
-    <TheWelcome />
-  </main>
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a @click="$router.push({name: 'home'})" class="navbar-item">
+              Accueil
+            </a>
+
+            <a @click="$router.push({name: 'allEvenements'})" class="navbar-item">
+              Projets
+            </a>
+
+            <a @click="$router.push({name: 'allUsers'})" class="navbar-item">
+              Portfolio IUT
+            </a>
+
+            <!-- Sous-menu -->
+<!--            <div class="navbar-item has-dropdown is-hoverable">-->
+<!--              <a class="navbar-link"></a>-->
+
+<!--              <div class="navbar-dropdown">-->
+<!--                <RouterLink v-if="apiStore.estConnecte" :to="{name: 'singleUser', params:{id: apiStore.utilisateurConnecte.id}}" class="navbar-item">-->
+<!--                  Mon profil-->
+<!--                </RouterLink>-->
+<!--                <a v-if="apiStore.estConnecte" @click="$router.push({name: 'settings'})" class="navbar-item">-->
+<!--                  Paramètres-->
+<!--                </a>-->
+<!--                <hr v-if="apiStore.estConnecte" class="navbar-divider">-->
+<!--                <a @click="$router.push({name: 'terms'})" class="navbar-item">-->
+<!--                  Mentions légales-->
+<!--                </a>-->
+<!--              </div>-->
+<!--            </div>-->
+          </div>
+
+          <div class="navbar-end">
+            <a class="navbar-item" @click="toggleDarkMode">
+              <img v-if="darkMode" alt="dark mode sun icon" src="@/assets/sun-dark.webp">
+              <img v-else alt="light mode sun icon" src="@/assets/sun-light.webp">
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <router-view />
+    </main>
+  </div>
 </template>
 
 <style scoped>
+/* Dark Mode */
+#wrapper.theme-dark {
+  background-color: #14161a;
+}
+
 header {
-  line-height: 1.5;
+  width: 100%;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+main {
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 </style>
