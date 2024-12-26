@@ -85,6 +85,23 @@ function toggleDarkMode() {
           </div>
 
           <div class="navbar-end">
+            <a class="navbar-item" href="https://github.com/ivelter" target="_blank">
+              <img v-if="darkMode" src="@/assets/img/github.png" alt="github logo">
+              <img v-else src="@/assets/img/github-black.png" alt="github logo">
+            </a>
+
+            <a class="navbar-item" href="https://www.linkedin.com/in/ilan-velter-b130ba264/">
+              <img v-if="darkMode" src="@/assets/img/linkedin.png" alt="linkedin logo">
+              <img v-else src="@/assets/img/linkedin-black.png" alt="linkedin logo">
+            </a>
+
+            <a class="navbar-item" href="mailto:ivelter0@gmail.com">
+              <img v-if="darkMode" src="@/assets/img/email.png" alt="email illustration">
+              <img v-else src="@/assets/img/email-black.png" alt="email illustration">
+            </a>
+
+            <hr class="navbar-divider">
+
             <a class="navbar-item" @click="toggleDarkMode">
               <img v-if="darkMode" alt="dark mode sun icon" src="@/assets/sun-dark.webp">
               <img v-else alt="light mode sun icon" src="@/assets/sun-light.webp">

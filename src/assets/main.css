@@ -2,3 +2,44 @@ body {
   margin:0;
   padding:0;
 }
+
+.hero-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content-container {
+  text-align: left;
+  display: flex;
+  flex-grow: 2;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.jump-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: auto; /* Pushes the button to the bottom of the container */
+  width: 100%;
+}
+
+.jump-button {
+  background-color: #3273dc;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.jump-button:hover {
+  background-color: #275aa8;
+  transform: scale(1.1) rotate(15deg);
+}
