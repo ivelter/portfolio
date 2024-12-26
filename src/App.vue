@@ -57,11 +57,11 @@ function toggleDarkMode() {
               Accueil
             </a>
 
-            <a @click="$router.push({name: 'allEvenements'})" class="navbar-item">
+            <a @click="$router.push({name: 'projets'})" class="navbar-item">
               Projets
             </a>
 
-            <a @click="$router.push({name: 'allUsers'})" class="navbar-item">
+            <a @click="$router.push({name: 'portfolio-iut'})" class="navbar-item">
               Portfolio IUT
             </a>
 
@@ -86,18 +86,18 @@ function toggleDarkMode() {
 
           <div class="navbar-end">
             <a class="navbar-item" href="https://github.com/ivelter" target="_blank">
-              <img v-if="darkMode" src="@/assets/img/github.png" alt="github logo">
-              <img v-else src="@/assets/img/github-black.png" alt="github logo">
+              <img v-if="darkMode" src="/img/github.png" alt="github logo">
+              <img v-else src="/img/github-black.png" alt="github logo">
             </a>
 
             <a class="navbar-item" href="https://www.linkedin.com/in/ilan-velter-b130ba264/">
-              <img v-if="darkMode" src="@/assets/img/linkedin.png" alt="linkedin logo">
-              <img v-else src="@/assets/img/linkedin-black.png" alt="linkedin logo">
+              <img v-if="darkMode" src="/img/linkedin.png" alt="linkedin logo">
+              <img v-else src="/img/linkedin-black.png" alt="linkedin logo">
             </a>
 
             <a class="navbar-item" href="mailto:ivelter0@gmail.com">
-              <img v-if="darkMode" src="@/assets/img/email.png" alt="email illustration">
-              <img v-else src="@/assets/img/email-black.png" alt="email illustration">
+              <img v-if="darkMode" src="/img/email.png" alt="email illustration">
+              <img v-else src="/img/email-black.png" alt="email illustration">
             </a>
 
             <hr class="navbar-divider">

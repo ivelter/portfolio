@@ -24,3 +24,20 @@ export interface TimelineType {
   content: TimelineContent[]
 }
 
+//-----------
+// Projects (preview)
+export enum ProjectTypes {
+  "sae",
+  "hackaton",
+  "gamejam",
+  "personnel"
+}
+
+export interface Project {
+  title: string,
+  subtitle: string,
+  type: ProjectTypes,
+  route: string,
+  imageSource: string|undefined,
+  imageAlt: string|undefined
+}
