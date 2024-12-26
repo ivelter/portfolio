@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import './assets/styles.scss';
 import { ref, type Ref } from 'vue'
 
 const darkMode: Ref<boolean> = ref(getDarkModeCookie() ?? userPrefersDarkMode());
@@ -102,7 +101,11 @@ function toggleDarkMode() {
 </template>
 
 <style scoped>
-/* Dark Mode */
+#wrapper.theme-light {
+  min-height: 100vh;
+  background-color: rgb(225, 235, 250);
+}
+
 #wrapper.theme-dark {
   background-color: #14161a;
 }

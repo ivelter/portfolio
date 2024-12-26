@@ -1,25 +1,25 @@
 <script setup lang="ts">
-
-import TimelineComponent from '@/components/TimelineComponent.vue'
+import TimelineEducation from '@/components/TimelineEducation.vue'
 </script>
 
 <template>
-  <section class="hero is-danger is-fullheight">
+  <section class="hero is-fullheight fullwidth">
     <div class="hero-body">
       <div class="">
-        <p class="title">Fullheight hero</p>
-        <p class="subtitle">Fullheight subtitle</p>
+        <p class="title">Portfolio</p>
+        <p class="subtitle">Bienvenue sur mon portfolio</p>
       </div>
     </div>
   </section>
 
-  <div>
-    <TimelineComponent title="education" class="fullwidth" />
+  <div class="fullwidth">
+    <TimelineEducation />
   </div>
 </template>
 
 <style scoped>
 .fullwidth {
   width: 100%;
+  min-width: 10vw;
 }
 </style>

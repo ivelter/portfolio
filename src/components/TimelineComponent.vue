@@ -2,16 +2,15 @@
 import { ref, onMounted } from 'vue';
 import type { TimelineType } from '@/types.ts';
 
-const props = defineProps<{ title: string }>();
+const props = defineProps<{ title: string, data: TimelineType }>();
 const timeline = ref<TimelineType | null>(null);
 
 onMounted(async () => {
   try {
-    const response = await fetch(`assets/json/timelines/${props.title}.json`);
-    if (!response.ok) {
-      console.error(`Failed to load JSON: ${response.statusText}`);
-    }
-    timeline.value = await response.json();
+    // Dynamically import the JSON file based on the title
+    import (`/assets/json/timelines/${props.title}.json`).then((module) => {
+      timeline.value = module.default;
+    })
   } catch (error) {
     console.error('Error loading timeline:', error);
   }
@@ -22,7 +21,7 @@ onMounted(async () => {
   <div v-if="timeline" class="timeline">
     <!-- Start Header -->
     <header v-if="timeline.start" class="timeline-header">
-      <span class="tag is-medium is-primary">{{ timeline.start.description }}</span>
+      <span class="tag is-medium is-primary">{{ timeline.start }}</span>
     </header>
 
     <!-- Timeline Content -->
@@ -44,7 +43,7 @@ onMounted(async () => {
 
     <!-- End Header -->
     <header v-if="timeline.end" class="timeline-header">
-      <span class="tag is-medium is-primary">{{ timeline.end.description }}</span>
+      <span class="tag is-medium is-primary">{{ timeline.end }}</span>
     </header>
   </div>
 

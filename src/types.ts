@@ -13,14 +13,14 @@ export interface TimelineHeader {
 
 export interface TimelineContent {
   type: 'header' | 'items';
-  header?: TimelineHeader;
-  items?: TimelineItem[];
+  header?: TimelineHeader | undefined;
+  items?: TimelineItem[] | undefined;
 }
 
 export interface TimelineType {
   title: string,
-  start: TimelineHeader|null,
-  end: TimelineHeader|null,
+  start: string|null,
+  end: string|null,
   content: TimelineContent[]
 }
 
