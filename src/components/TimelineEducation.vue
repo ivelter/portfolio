@@ -11,14 +11,14 @@
         <div class="card">
           <div class="info">
             <h3 class="title">2024 - 2025</h3>
-            <p>BUT Informatique 3e année (Parcours RADCV) | Alternance en développement web PHP</p>
+            <p>BUT Informatique 3e année (Parcours RADCV)<br>Alternance en développement web PHP</p>
           </div>
         </div>
 
         <div class="card">
           <div class="info">
             <h3 class="title">2023 - 2024</h3>
-            <p>BUT Informatique 2e année (Parcours RADCV) | Stage en développement web PHP</p>
+            <p>BUT Informatique 2e année (Parcours RADCV)<br>Stage en développement web PHP</p>
           </div>
         </div>
 

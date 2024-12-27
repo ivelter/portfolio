@@ -41,3 +41,10 @@ export interface Project {
   imageSource: string|undefined,
   imageAlt: string|undefined
 }
+
+//-----------
+// Openable summary/details sections
+export interface AccordionItem {
+  summary: string,
+  details: string
+}

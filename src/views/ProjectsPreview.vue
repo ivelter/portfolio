@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import ProjectCard from '@/components/ProjectCard.vue'
-import { type Project, ProjectTypes } from '@/types.ts'
+//import ProjectCard from '@/components/ProjectCard.vue'
+//import { type Project, ProjectTypes } from '@/types.ts'
 import router from '@/router'
 
-const projects: Project[] = [
+/*const projects: Project[] = [
   {
     title: 'EventManager',
     subtitle: "API et site de gestion d'évènements",
@@ -12,16 +12,16 @@ const projects: Project[] = [
     imageSource: "eventmanager/logo.png",
     imageAlt: "logo event manager"
   },
-]
+]*/
 </script>
 
 <template>
   <div class="container">
-    <h1 class="title mt-6">Tous les projets</h1>
+    <h1 class="title mt-6">Projets</h1>
     <div id="grid-container" class="fixed-grid has-1-cols-mobile has-4-cols-desktop">
       <div class="grid">
 
-        <div @click="router.push('/projects/eventmanager')" class="card cursor-hover project-sae">
+        <div @click="router.push('/projets/eventmanager')" class="card cursor-hover project-sae">
           <div class="card-image">
             <figure class="image is-3 m-6">
               <img
@@ -40,7 +40,7 @@ const projects: Project[] = [
           </div>
         </div>
 
-        <div @click="router.push('/projects/trellotrolle')" class="card cursor-hover project-sae">
+        <div @click="router.push('/projets/trellotrolle')" class="card cursor-hover project-sae">
           <div class="card-image">
             <figure class="image is-1by1">
               <img
@@ -59,7 +59,7 @@ const projects: Project[] = [
           </div>
         </div>
 
-        <div @click="router.push('/projects/cgj2024')" class="card cursor-hover project-gamejam">
+        <div @click="router.push('/projets/cgj2024')" class="card cursor-hover project-gamejam">
           <div class="card-image">
             <figure class="image is-1by1">
               <img
@@ -78,7 +78,7 @@ const projects: Project[] = [
           </div>
         </div>
 
-        <div @click="router.push('/projects/etustage')" class="card cursor-hover project-sae">
+        <div @click="router.push('/projets/etustage')" class="card cursor-hover project-sae">
           <div class="card-image">
             <figure class="image is-1by1">
               <img

@@ -26,9 +26,13 @@ function scrollToSection(section: string) {
     </div>
   </section>
 
-  <div id="about" class="fullwidth pt-6">
-    <AboutMe @nextSection="scrollToSection('timeline')" />
-  </div>
+  <section class="hero is-fullheight fullwidth">
+    <div class="hero-body">
+      <div id="about" class="fullwidth pt-6">
+        <AboutMe @nextSection="scrollToSection('timeline')" />
+      </div>
+    </div>
+  </section>
 
   <div id="timeline" class="fullwidth pt-6">
     <TimelineEducation />

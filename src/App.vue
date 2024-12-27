@@ -16,7 +16,7 @@ function userPrefersDarkMode(): boolean {
 function getDarkModeCookie(): boolean | null {
   const match = document.cookie
     .split("; ")
-    .find((row) => row.startsWith("darkmode-portfolior="))
+    .find((row) => row.startsWith("darkmode-portfolio="))
     ?.split("=")[1];
   return match !== null ? match == 'true' : null;
 }
@@ -61,9 +61,9 @@ function toggleDarkMode() {
               Projets
             </a>
 
-            <a @click="$router.push({name: 'portfolio-iut'})" class="navbar-item">
-              Portfolio IUT
-            </a>
+<!--            <a @click="$router.push({name: 'portfolio-iut'})" class="navbar-item">-->
+<!--              Portfolio IUT-->
+<!--            </a>-->
 
             <!-- Sous-menu -->
 <!--            <div class="navbar-item has-dropdown is-hoverable">-->
