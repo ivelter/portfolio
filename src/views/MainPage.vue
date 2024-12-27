@@ -14,8 +14,8 @@ function scrollToSection(section: string) {
   <section class="hero is-fullheight fullwidth">
     <div class="hero-body">
       <div class="content-container">
-        <p class="title">Portfolio</p>
-        <p class="subtitle">Bienvenue sur mon portfolio</p>
+        <p class="title">👋</p>
+        <p class="subtitle">Ilan, développeur en développement</p>
       </div>
 
       <div class="jump-button-container">
