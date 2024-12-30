@@ -1,6 +1,14 @@
+<script setup lang="ts">
+import router from '@/router'
+import { ref, type Ref } from 'vue'
+
+const goofyMode: Ref<boolean> = ref(new URLSearchParams(window.location.search).get("goofyMode") === "true");
+</script>
+
+
 <template>
   <div id="aboutsection-container" class="pt-6 columns is-variable is-5 is-centered">
-    <div id="lefunny" class="is-one-quarter-mobile is-full-mobile is-centered">
+    <div v-if="goofyMode" id="lefunny" class="is-one-quarter-mobile is-full-mobile is-centered">
       <img src="/img/cat-jumping.gif" alt="cat jumping gif">
     </div>
 
@@ -34,12 +42,19 @@
         </article>
       </div>
 
-      <div class="buttons mt-6">
+      <div class="buttons mt-6" id="download-btns">
         <a href="" class="button is-link is-medium">
           <span class="icon is-small pl-3 pr-5">
             <i class="fas fa-download"></i>
           </span>
           Télécharger mon CV
+        </a>
+
+        <a @click="router.push({name: 'projets'})" class="button is-info is-medium">
+          <span class="icon is-small pl-3 pr-5">
+            <i class="fas fa-code"></i>
+          </span>
+          Voir mes projets
         </a>
       </div>
 
@@ -77,9 +92,13 @@
     justify-content: center;
     margin-bottom: 15px;
   }
+
+  #download-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
 }
 </style>
 
-<script setup lang="ts">
-
-</script>

@@ -3,6 +3,7 @@ import MainPage from '@/views/MainPage.vue'
 import ProjectsPreview from '@/views/ProjectsPreview.vue'
 import PortfolioIUT from '@/views/PortfolioIUT.vue'
 import Project_EventManager from '@/views/projects/Project_EventManager.vue'
+import Project_TrelloTrolle from '@/views/projects/Project_TrelloTrolle.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -29,8 +30,13 @@ const router = createRouter({
     },
     {
       path: '/projets/eventmanager',
-      name: 'project_eventmanagar',
+      name: 'project_eventmanager',
       component: Project_EventManager
+    },
+    {
+      path: '/projets/trellotrolle',
+      name: 'project_trellotrolle',
+      component: Project_TrelloTrolle
     },
   ]
 })

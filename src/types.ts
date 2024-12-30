@@ -27,10 +27,10 @@ export interface TimelineType {
 //-----------
 // Projects (preview)
 export enum ProjectTypes {
-  "sae",
-  "hackaton",
-  "gamejam",
-  "personnel"
+  sae,
+  hackaton,
+  gamejam,
+  personnel,
 }
 
 export interface Project {
@@ -45,6 +45,18 @@ export interface Project {
 //-----------
 // Openable summary/details sections
 export interface AccordionItem {
+  category: Competences|null|undefined,
   summary: string,
-  details: string
+  details: string,
+}
+
+//-----------
+// Portfolio IUT
+export enum Competences {
+  realiser,
+  optimiser,
+  administrer,
+  gerer,
+  conduire,
+  collaborer,
 }

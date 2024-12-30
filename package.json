@@ -11,7 +11,7 @@
     "type-check": "vue-tsc --build",
     "lint": "eslint . --fix",
     "format": "prettier --write src/",
-    "deploy": "npm run build && git add dist/* && git commit -m \"🛠️New build\" && git push && git subtree push --prefix dist origin gh-pages"
+    "deploy": "npm run build && cd dist && copy index.html 404.html && cd .. && git add dist/* && git commit -m \"🛠️New build\" && git push && git subtree push --prefix dist origin gh-pages"
   },
   "dependencies": {
     "vue": "^3.5.13",
