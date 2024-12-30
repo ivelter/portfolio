@@ -2,6 +2,7 @@
 import { ref, type Ref } from 'vue'
 
 const darkMode: Ref<boolean> = ref(getDarkModeCookie() ?? userPrefersDarkMode());
+const mobileNavbarIsOpened: Ref<boolean> = ref(false);
 
 /**
  * Returns true if the user's browser is set to prefer dark mode
@@ -32,6 +33,10 @@ function toggleDarkMode() {
   darkMode.value = !darkMode.value;
   setDarkModeCookie();
 }
+
+function openCloseNavbarMobile() {
+  mobileNavbarIsOpened.value = !mobileNavbarIsOpened.value;
+}
 </script>
 
 <template>
@@ -43,7 +48,7 @@ function toggleDarkMode() {
 <!--            <img alt="event manager logo" src="@/assets/logo-eventmanager.png">-->
 <!--          </a>-->
 
-          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+          <a @click="openCloseNavbarMobile" :class="{'is-active': mobileNavbarIsOpened}" role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
             <span aria-hidden="true"></span>
@@ -51,7 +56,7 @@ function toggleDarkMode() {
           </a>
         </div>
 
-        <div id="navbarBasicExample" class="navbar-menu">
+        <div id="navbarBasicExample" :class="{'is-active': mobileNavbarIsOpened}" class="navbar-menu">
           <div class="navbar-start">
             <a @click="$router.push({name: 'home'})" class="navbar-item">
               Accueil
