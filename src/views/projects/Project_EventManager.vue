@@ -63,6 +63,7 @@ const competences: AccordionItem[] = [
           Le tout est automatiquement stocké dans une base de données quelconque à l'aide de
           Doctrine.
         </p>
+        <img src="/img/projects/eventmanager/api.png" alt="api screenshot">
 
         <p class="subtitle mt-3">Application web liée à l'API</p>
         <p>
@@ -80,6 +81,8 @@ const competences: AccordionItem[] = [
           déconnexion, et l'inscription, et tout ce qui touche à la récupération et l'affichage des
           données (évènements à venir/en cours, utilisateurs inscrits à ces évènements...)
         </p>
+        <img src="/img/projects/eventmanager/front.png" alt="front screenshot">
+
       </div>
     </div>
   </div>
@@ -110,6 +113,12 @@ const competences: AccordionItem[] = [
 .project-container p,
 .project-container ul {
   color: var(--primary-text-color);
+}
+
+.project-container img {
+  border-style: solid;
+  border-color: var(--primary-text-color);
+  border-width: 1px;
 }
 
 .subtitle {
