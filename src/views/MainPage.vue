@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TimelineEducation from '@/components/TimelineEducation.vue'
 import AboutMe from '@/components/AboutMe.vue'
+import SkillsSection from '@/components/SkillsSection.vue'
 
 function scrollToSection(section: string) {
   const nextSection = document.getElementById(section);
@@ -29,7 +30,15 @@ function scrollToSection(section: string) {
   <section class="hero is-fullheight fullwidth">
     <div class="hero-body">
       <div id="about" class="fullwidth pt-6">
-        <AboutMe @nextSection="scrollToSection('timeline')" />
+        <AboutMe @nextSection="scrollToSection('skills')" />
+      </div>
+    </div>
+  </section>
+
+  <section class="hero is-fullheight fullwidth">
+    <div class="hero-body">
+      <div id="skills" class="fullwidth pt-6">
+        <SkillsSection @nextSection="scrollToSection('timeline')" />
       </div>
     </div>
   </section>

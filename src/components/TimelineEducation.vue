@@ -43,7 +43,7 @@
 <style scoped>
 #timeline-title h1 {
   text-align: center;
-  color: #003830;
+  color: var(--primary-text-color);
 }
 
 #timeline-container {
@@ -59,7 +59,7 @@
 
 /* Outer Layer with the timeline border */
 .outer {
-  border-left: 2px solid #333;
+  border-left: 2px solid var(--accordion-summary-bg);
 }
 
 /* Card container */
@@ -67,8 +67,8 @@
   position: relative;
   margin: 0 0 20px 20px;
   padding: 10px;
-  background: #003830;
-  color: #05f3d0;
+  background: var(--accordion-summary-bg);
+  color: var(--primary-text-color);
   border-radius: 8px;
   max-width: 400px;
 }
@@ -82,8 +82,9 @@
 
 /* Title of the card */
 .title {
-  color: white;
+  color: var(--primary-text-color);
   position: relative;
+  margin-bottom: 0;
 }
 
 /* Timeline dot  */
@@ -92,9 +93,9 @@
   position: absolute;
   width: 10px;
   height: 10px;
-  background: white;
+  background: var(--primary-text-color);
   border-radius: 999px;
   left: -35px;
-  border: 3px solid #003830;
+  border: 3px solid var(--accordion-summary-bg);
 }
 </style>

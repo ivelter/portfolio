@@ -51,6 +51,13 @@ export interface AccordionItem {
 }
 
 //-----------
+// Skills section
+export interface ProgressBarItem {
+  name: string
+  percentage: number
+}
+
+//-----------
 // Portfolio IUT
 export enum Competences {
   realiser,
