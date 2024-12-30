@@ -66,6 +66,7 @@ const skills: ProgressBarItem[] = [
 }
 
 h1 {
+  text-align: center;
   color: var(--primary-text-color);
 }
 </style>
