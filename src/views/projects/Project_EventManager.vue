@@ -9,9 +9,19 @@ const competences: AccordionItem[] = [
     details:
       'Ce projet remplit les niveaux 2 et 3 de cette compétence. ' +
       "En effet, avec l'ensemble de mon groupe, nous avons développé une application complète et fonctionnelle " +
-      'à partir des exigences données dans les consignes, et cette application est disponible sous plusieurs formats ' +
+      "à partir des exigences données dans les consignes. Le code est clair et documenté, et la " +
+      "séparation entre API (back-end) et application web (front-end) permet également une séparation plus " +
+      "évidente des différentes couches de l'ensemble de l'application."
+  },
+  {
+    category: Competences.realiser,
+    summary: 'AC3 - Intégrer des solutions dans un environnement de produiction',
+    details:
+      'Cette application est disponible sous plusieurs formats ' +
       "(API pour les développeurs, et une interface web). L'application est conçue de telle sorte à ce qu'on peut imaginer " +
-      "d'autres supports sur lesquels la porter, notamment un support applicatif mobile (via une application native ou un framework comme React Native).",
+      "d'autres supports sur lesquels la porter, notamment un support applicatif mobile (via une application native ou un framework comme React Native). " +
+      "Elle est également facilement déployable sur un quelconque serveur, l'application étant configurée pour s'adapter à un " +
+      "environnement de développement ou de production.",
   },
   {
     category: Competences.collaborer,

@@ -19,7 +19,7 @@ const competences: AccordionItem[] = [
       "Avec l'accord du groupe, j'ai rapidement pris des décisions afin d'être le mieux organisé possible, " +
       'en organisant la priorisation des tâches à réaliser, comme le code du mouvement du joueur, ' +
       'dont une majorité du reste du projet dépendait. ' +
-      "J'estime donc avoir validé les niveaux 2 et 3 de cette compétence.",
+      "J'estime donc avoir validé le niveau 2 de cette compétence.",
   },
 ]
 </script>
@@ -49,7 +49,10 @@ const competences: AccordionItem[] = [
 
         <p class="subtitle mt-3">Réalisation du projet</p>
         <p>
-          Nous avons programmé le jeu avec le moteur open-source Godot.
+          Nous avons programmé le jeu avec le moteur open-source
+          <a href="https://godotengine.org/" target="_blank">
+            Godot.
+          </a>
         </p>
         <p>
           Pour mener à bien le projet, nous avons également utilisé d'autres outils,

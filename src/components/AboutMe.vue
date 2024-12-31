@@ -43,7 +43,7 @@ const goofyMode: Ref<boolean> = ref(new URLSearchParams(window.location.search).
       </div>
 
       <div class="buttons mt-6" id="download-btns">
-        <a href="" class="button is-link is-medium">
+        <a href="/doc/cv.pdf" class="button is-link is-medium">
           <span class="icon is-small pl-3 pr-5">
             <i class="fas fa-download"></i>
           </span>

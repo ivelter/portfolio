@@ -4,21 +4,28 @@ import AccordionSection from '@/components/AccordionSection.vue'
 
 const competences: AccordionItem[] = [
   {
-    category: Competences.optimiser,
-    summary: 'Compétence 2 - Optimiser',
+    category: Competences.realiser,
+    summary: 'AC2 - Faire évoluer une application existante',
     details:
-      "Le principal aspect de cette SAE étant l'optimisation de l'application, " +
-      "je pense avoir validé le niveau 2 (voire le niveau 3) de cette compétence. En effet, en plus " +
+      "Le principal aspect de cette SAE était le refactoring de l'application. " +
+      "En effet, en plus " +
       "d'avoir amélioré l'architecture du code et les algorithmes utilisés, nous avons avant tout " +
       "analysé l'entièreté du code et ses failles, le tout organisé dans un rapport."
   },
   {
-    category: Competences.administrer,
-    summary: 'Compétence 3 - Administrer',
+    category: Competences.realiser,
+    summary: 'AC3 - Intégrer des solutions dans un environnement de production',
     details:
       "Pour ce projet, j'ai également réalisé une configuration Docker, permettant de déployer " +
-      "l'application et ses dépendances, et ce simplement. J'estime donc que cela valide le " +
-      "niveau de 2 cette compétence."
+      "l'application et ses dépendances, et ce simplement."
+  },
+  {
+    category: Competences.optimiser,
+    summary: "AC2 - Profiler, analyser et justifier le comportement d'un code existant",
+    details:
+      "La première partie de cette SAE consistait à réaliser une analyse technique du code existant, " +
+      "en justifiant des éventuelles failles, incompréhensions et fautes de comportement trouvées, le tout " +
+      "consigné dans un rapport technique."
   },
   {
     category: Competences.gerer,
@@ -38,7 +45,7 @@ const competences: AccordionItem[] = [
       "Avec l'accord du groupe, j'ai rapidement pris des décisions afin d'être le mieux organisé possible, " +
       'en priorisant notamment certaines tâches, comme la refactorisation en services et l\'utilisation de Twig, ' +
       'dont une majorité du reste du projet dépendait. ' +
-      "J'estime donc avoir validé les niveaux 2 et 3 de cette compétence.",
+      "J'estime donc avoir validé le niveau 2 de cette compétence.",
   },
 ]
 </script>
@@ -95,6 +102,14 @@ const competences: AccordionItem[] = [
         </p>
         <p>
           Enfin, nous avons implémenté des fonctionnalités additionnelles, comme le drag-and-drop des cartes.
+        </p>
+        <p>
+          <b>
+            Trace:
+            <a href="/doc/rapport-trellotrolle.pdf" target="_blank">
+              Rapport technique
+            </a>
+          </b>
         </p>
       </div>
     </div>
