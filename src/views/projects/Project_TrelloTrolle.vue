@@ -106,7 +106,7 @@ const competences: AccordionItem[] = [
         <p>
           <b>
             Trace:
-            <a href="/doc/rapport-trellotrolle.pdf" target="_blank">
+            <a href="/portfolio/doc/rapport-trellotrolle.pdf" target="_blank">
               Rapport technique
             </a>
           </b>
