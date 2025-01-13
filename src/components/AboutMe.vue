@@ -35,9 +35,8 @@ const goofyMode: Ref<boolean> = ref(new URLSearchParams(window.location.search).
             <p>Projet d'avenir</p>
           </div>
           <div class="message-body">
-            A terme, je souhaite principalement intégrer le monde du travail directement après mon BUT,
-            mais je pourrais également intégrer une école d'ingénieur pour compléter mes études
-            si l'occasion et les conditions se présentent.
+            Etant en train de postuler à plusieurs écoles d'ingénieur, il est probable
+            que je me dirige vers l'une d'entre elles si l'occasion se présente.
           </div>
         </article>
       </div>
