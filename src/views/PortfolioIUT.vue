@@ -6,7 +6,7 @@
 
     <p class="title mt-6">Réaliser</p>
     <p class="subtitle">Adapter des applications sur un ensemble de supports (embarqué, web, mobile, IoT...)</p>
-    <p class="subtitle">Développement de fonctionnalités selon des besoins client</p>
+    <p class="subtitle">Stage/Alternance: Développement de fonctionnalités selon des besoins client</p>
     <p>
       Apprentissages critiques: AC2 "Faire évoluer une application existante" et
       AC2 "Intégrer des solutions dans un environnement de production" du niveau 3 de l'UE "Réaliser"
