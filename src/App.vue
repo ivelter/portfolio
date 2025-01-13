@@ -66,6 +66,10 @@ function openCloseNavbarMobile() {
               Projets
             </a>
 
+            <a @click="$router.push({name: 'portfolio-iut'})" class="navbar-item">
+              Portfolio d'apprentissage
+            </a>
+
 <!--            <a @click="$router.push({name: 'portfolio-iut'})" class="navbar-item">-->
 <!--              Portfolio IUT-->
 <!--            </a>-->
