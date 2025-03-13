@@ -70,7 +70,7 @@
     <p class="mission">
       Projet Algorithmique: Moteur de recommandations de films en Scala
     </p>
-    <p>
+    <div>
       Réalisé au 6e semestre, ce projet de data science visait à développer un
       moteur de recommandations en utilisant le langage Scala.
       En combinant des techniques de filtrage collaboratif et l’analyse de données,
@@ -81,7 +81,7 @@
         <li class="apprentissage">AC2 – Profiler, analyser et justifier le comportement d’un code existant</li>
         <li class="apprentissage">AC3 – Choisir et utiliser des bibliothèques et méthodes dédiées au domaine d’application</li>
       </ul>
-    </p>
+    </div>
     <p class="mission">
       Mini projet de virtualisation Docker
     </p>
@@ -143,7 +143,7 @@
     <p class="mission">
       Compléments – Collaboration et management
     </p>
-    <p>
+    <div>
       Par ailleurs, au-delà de la veille informationnelle, j’ai participé à de nombreux projets
       de management en mode agile depuis la 2e année,
       où la communication, la coordination et la répartition des tâches étaient essentielles.
@@ -155,7 +155,7 @@
         <li class="apprentissage">AC3 – Savoir adapter un système d’information</li>
         <li class="apprentissage">AC4 – Accompagner le management de projet informatique</li>
       </ul>
-    </p>
+    </div>
   </div>
 </template>
 
@@ -176,7 +176,7 @@
   font-size: 1.3rem;
 }
 
-.title, .subtitle, .mission, p, a, li {
+.title, .subtitle, .mission, p, a, li, div {
   color: var(--primary-text-color);
 }
 
